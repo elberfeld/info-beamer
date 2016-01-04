@@ -194,6 +194,15 @@ function create_sandbox()
             sort = table.sort;
         };
 
+        os = {
+            clock = os.clock;
+            date = os.date;
+            difftime = os.difftime;
+            getenv = os.getenv;
+            setlocale = os.setlocale;
+            time = os.time;
+        };
+        
         print = print;
 
         loadstring = function(code, chunkname)
@@ -489,9 +498,6 @@ loadfile = nil
 load = nil
 package = nil
 module = nil
-os = {
-    getenv = os.getenv;
-}
 dofile = nil
 debug = {
     traceback = debug.traceback;
